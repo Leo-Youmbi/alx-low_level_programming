@@ -11,19 +11,20 @@
 char *rot13(char *s)
 {
 	int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	i = 0;
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		for (j = 0; j < 52; j++)
 		{
-			s[i] = (s[i] + 13 - 97) % 26 + 97;
+			if (s[i] == data1[j])
+			{
+				s[i] = datarot[j];
+				break;
+			}
 		}
-		else if (s[i] >= 'A' && s[i] <= 'Z')
-		{
-			s[i] = (s[i] + 13 - 65) % 26 + 65;
-		}
-		i++;
 	}
 	return (s);
 }
