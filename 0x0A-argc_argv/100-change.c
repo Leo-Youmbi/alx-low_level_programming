@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		{
 			for (i = 0; i < 5; i++)
 			{
-				if ((num >= coins[i]))
+				if (num >= coins[i])
 				{
 					rem = num;
 					num %= coins[i];
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 					{
 						res += ((rem - num) / coins[i]);
 					}
-					else 
+					else
 					{
 						res += rem / coins[i];
 						break;
