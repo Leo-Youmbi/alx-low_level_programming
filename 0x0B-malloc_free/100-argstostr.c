@@ -10,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int len, i, j, r;
+	int len = 0, i, j, r;
 
 	if ((ac == 0) || (av == NULL))
 		return (NULL);
@@ -32,7 +32,6 @@ char *argstostr(int ac, char **av)
 			r++;
 		}
 
-		i++;
 		if (str[r] == '\0')
 		{
 			str[r++] = '\n';
