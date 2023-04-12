@@ -34,13 +34,12 @@ char *argstostr(int ac, char **av)
 	num = ac;
 	while (num--)
 	{
-		j = 0;
-		while (av[i][j] != '\0')
+		for (j = 0; av[i][j]; j++)
 		{
 			str[r] = av[i][j];
 			r++;
-			j++;
 		}
+
 		i++;
 		if (str[r] == '\0')
 		{
