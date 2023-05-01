@@ -22,7 +22,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(curNode);
 		return (1);
 	}
-	
+
 	while (i < index - 1)
 	{
 		if (!curNode || !(curNode->next))
@@ -30,10 +30,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		curNode = curNode->next;
 		i++;
 	}
-	
+
 	predNode = curNode->next;
 	curNode->next = predNode->next;
 	free(predNode);
-	return (1)
-	
+	return (1);
+
 }
