@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - Add a node to the linked list.
+ * *add_dnodeint - Add a node to the linked list.
  * @head: head of list
  * @n: value of node
  *
